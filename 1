@@ -1,0 +1,36 @@
+print('введите четырёхзначное число')
+h = int(input())
+print('введите трёхзначное слово')
+s = str(input())
+key = str(h)+s
+if "usr" in key:
+    print('введите свой ID номер')
+    p = int(input())
+    if p == h:
+        print('Пользователь подтверждён')
+    else: print('Неверный ID номер')
+elif "clc" in key:
+    print("введите первое число")
+    per = float(input())
+    print("введите второе число")
+    vtor = float(input())
+    print("введите третье число")
+    tret = float(input())
+    a = abs(per) * abs(vtor) * abs(tret)
+    b = per + vtor + tret
+    c = max(per, vtor, tret)
+    d = min(per, vtor, tret)
+    e = c / d
+    f = c - d - (per + vtor + tret -c - d)
+    print('Произведение модулей =', a)
+    print('Сумма чисел =', b)
+    print('Наибольшее =', c)
+    print('Наименьшее =', d)
+    print('Деление =', e)
+    print('Вычитание =', f)
+elif 'adm'in key:
+    print('Введите строку')
+    strk = str(input())
+    if len(strk) > 5 and (".exe" in strk or ".cmd" in strk):
+        print('Исполняемое действие')
+    else: print('Неисполняемое действие')
