@@ -1,0 +1,29 @@
+#2
+def myFunc(*args):
+List_of_str = []
+List_of_num = []
+List_of_bool = []
+List_of_other = []
+for arg in args:
+    if isinstance(arg, str):
+        List_of_str.append(arg)
+    elif isinstance(arg, int) or isinstance(arg, float):
+        List_of_num.append(arg)
+    elif isinstance(arg, bool):
+        List_of_bool.append(arg)
+    else:
+        List_of_other.append(arg)
+
+print("List_of_str :", List_of_str)
+print("List_of_num :", List_of_num)
+print("List_of_bool :", List_of_bool)
+print("List_of_other :", List_of_other)
+
+#3
+def search_dict(keyword, **kwargs):
+for key, value in kwargs.items():
+if isinstance(value, dict):
+if keyword in value:
+print({keyword: value[keyword]})
+else:
+search_dict(keyword, **value)
