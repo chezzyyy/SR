@@ -1,0 +1,23 @@
+# Статические атрибуты
+ingredients = ['мясо', 'овощи', 'сыр', 'соусы']
+price = 150
+
+def __init__(self, meat, vegetables, sauce):
+    # Динамические атрибуты
+    self.meat = meat
+    self.vegetables = vegetables
+    self.sauce = sauce
+
+def add_ingredient(self, ingredient):
+    # Динамический метод
+    self.ingredients.append(ingredient)
+
+@staticmethod
+def get_price():
+    # Статический метод
+    return Shawarma.price
+
+@classmethod
+def set_price(cls, new_price):
+    # Статический метод
+    cls.price = new_price
