@@ -30,16 +30,20 @@ class Superhero:
     def purify(self):
         for skill in self.skill_list:
             skill.active = True
-            
+
+#создаём способности
 laser_power = Power('Лазер')
 missiles_power = Power('Ракеты')
 matrix_power = Power('Защитная Матрица')
 rearm_power = Power('Перезарядка')
+
+#создаём героя
 tinker = Superhero(name='Тинкер', skill_list=[laser_power, missiles_power, matrix_power, rearm_power])
-tinker.usePower(1)
-tinker.getKryptonite(1)
-tinker.getKryptonite()
-tinker.getPowerStatus()
-tinker.usePower(1)
-tinker.purify()
-tinker.getPowerStatus()   
+#задаём порядок действий
+tinker.usePower(1) #использовать заклинание
+tinker.getKryptonite(1) #запретить заклинание
+tinker.getKryptonite() #запретить рандом заклинание
+tinker.getPowerStatus() #проверить статус способностей
+tinker.usePower(1) #использовать заклинание
+tinker.purify() #перезарядить все 
+tinker.getPowerStatus() #проверить статус способностей
